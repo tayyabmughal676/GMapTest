@@ -41,16 +41,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
+        val sydney = LatLng(33.738045, 73.084488)
 //        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
 //        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney ,ZOOM_LEVEL))
         with(googleMap) {
             moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, ZOOM_LEVEL))
-            addMarker(MarkerOptions().position(sydney))
+            addMarker(MarkerOptions().position(sydney).title("Marker in Islamabad"))
         }
 
     }
-    
+
     fun checkMyPermission(mLocationPG :Boolean){
         if(mLocationPG){
             Toast.makeText(this, "Ready to Map!", Toast.LENGTH_SHORT).show();
